@@ -2,7 +2,7 @@
 const addForm = document.querySelector('.add');
 const list = document.querySelector('.todos');
 
-alert("alert");
+
 
 // function that generate html template and add it to the list
 const template = todo => {
@@ -21,5 +21,10 @@ addForm.addEventListener('submit', e => {
     e.preventDefault();
     // get user input
     const todo = addForm.add.value.trim();
-    template(todo);
+    // check if user type value
+    if(todo.length) {
+        template(todo);
+        // clear form after submit new todo
+        addForm.reset();
+    }
 });
