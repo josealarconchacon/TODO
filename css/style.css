@@ -22,6 +22,9 @@ input[type=text]:focus{
 .delete{
   cursor: pointer;
 }
+.filtered {
+  display: none  !important;
+}
 /* add new todo */
 .text-light {
   font-family:'Times New Roman', Times, serif;

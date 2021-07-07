@@ -36,4 +36,23 @@ list.addEventListener('click', e => {
     }
 });
 
+// filter todo 
+const filterTodo = (term) => {
+    // console.log(term);
+    // filter and show the todo that do no contain the term
+    Array.from(list.children)
+        .filter((todo) => !todo.textContent.includes(term))
+        .forEach((todo) => todo.classList.add('filtered'));
+
+        // get all of the element that do match
+    Array.from(list.children)
+        .filter((todo) => todo.textContent.includes(term))
+        .forEach((todo) => todo.classList.remove('filtered'));
+};
+
 // search todo
+// keyup event
+searchTodo.addEventListener('keyup', () => {
+    const term = searchTodo.value.trim();
+    filterTodo(term);
+});
