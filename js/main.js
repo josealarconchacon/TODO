@@ -1,7 +1,7 @@
 // reference
 const addForm = document.querySelector('.add');
 const list = document.querySelector('.todos');
-
+const searchTodo = document.querySelector('.search input');
 
 
 // function that generate html template and add it to the list
@@ -35,3 +35,5 @@ list.addEventListener('click', e => {
         e.target.parentElement.remove();
     }
 });
+
+// search todo
